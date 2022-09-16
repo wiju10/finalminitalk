@@ -6,7 +6,7 @@
 /*   By: wtan <wtan@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 09:36:36 by wtan              #+#    #+#             */
-/*   Updated: 2022/09/17 05:25:34 by wtan             ###   ########.fr       */
+/*   Updated: 2022/09/17 05:32:04 by wtan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ int	main(int argc, char **argv)
 	if (argc == 3)
 	{
 		pid = ft_atoi(argv[1]);
-		while(argv[2][i])
-		convert_char_to_bit(argv[2][i++], pid);
+		while (argv[2][i])
+			convert_char_to_bit(argv[2][i++], pid);
 		return (0);
 	}
 	else

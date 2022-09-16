@@ -6,7 +6,7 @@
 /*   By: wtan <wtan@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 05:24:42 by wtan              #+#    #+#             */
-/*   Updated: 2022/09/17 05:29:15 by wtan             ###   ########.fr       */
+/*   Updated: 2022/09/17 05:31:30 by wtan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,6 @@ int	main(void)
 	ft_printf("Server PID: %d\n", pid);
 	signal(SIGUSR1, signal_handler);
 	signal(SIGUSR2, signal_handler);
-	while(1)
+	while (1)
 		pause();
 }
