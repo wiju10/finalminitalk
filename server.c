@@ -23,8 +23,8 @@ static void	signal_handler(int sig)
 	if (power == 8)
 	{
 		ft_printf("%c", byte);
-		if (byte == '\0')
-			exit (1);
+//		if (byte == '\0')
+//			exit (1);
 		power = 0;
 		byte = 0;
 	}
