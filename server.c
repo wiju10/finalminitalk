@@ -6,26 +6,27 @@
 /*   By: wtan <wtan@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 05:24:42 by wtan              #+#    #+#             */
-/*   Updated: 2022/09/17 05:31:30 by wtan             ###   ########.fr       */
+/*   Updated: 2022/09/17 06:32:42 by wtan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
-
+/**
+ * 1. Use bitwise operator to reverse the bits because server receives 
+ * it in reverse. When the count reaches 8, print out the character.
+ **/
 static void	signal_handler(int sig)
 {
-	static int	power;
+	static int	count;
 	static int	byte;
 
 	if (sig == SIGUSR1)
-		byte += 1 << (7 - power);
-	power++;
-	if (power == 8)
+		byte += 1 << (7 - count);
+	count++;
+	if (count == 8)
 	{
 		ft_printf("%c", byte);
-//		if (byte == '\0')
-//			exit (1);
-		power = 0;
+		count = 0;
 		byte = 0;
 	}
 }
