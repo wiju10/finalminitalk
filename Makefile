@@ -6,7 +6,7 @@
 #    By: wtan <wtan@student.42kl.edu.my>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/17 05:26:47 by wtan              #+#    #+#              #
-#    Updated: 2022/09/17 05:26:48 by wtan             ###   ########.fr        #
+#    Updated: 2022/09/17 06:35:55 by wtan             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,12 +43,12 @@ client: $(CLIENT)
 clean:
 		make -C ft_printf clean
 		make -C libft clean
-		$(RM) $(CLIENT) $(SERVER) $(SERVER_BONUS) $(CLIENT_BONUS)
+		$(RM) $(CLIENT) $(SERVER) 
 
 fclean:
 		make fclean -C $(libft)/
 		make fclean -C $(printf)/
-		$(RM) $(CLIENT) $(SERVER) $(SERVER_BONUS) $(CLIENT_BONUS)
+		$(RM) $(CLIENT) $(SERVER) 
 		
 re: clean all
 
